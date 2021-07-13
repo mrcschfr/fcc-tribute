@@ -73,6 +73,12 @@ h1 {
     width: fit-content;
 }
 
+@media (max-width: 810px) {
+    header {
+        padding: 10%;
+    }
+}
+
 /*
  * CONTENT/ MAIN
  */
@@ -89,14 +95,20 @@ main {
         "cv cv";
 }
 
-#image-section {
+#img-div {
     grid-area: image;
 }
 
-#image-section img {
+#img-div img {
     margin-bottom: 25px;
     width: 100%;
     max-width: 330px;
+    display: block;
+    margin: 0px auto 25px auto;
+}
+
+#img-div figcaption {
+    text-align: center;
 }
 
 #cv-header, #source-header {
@@ -146,25 +158,25 @@ td:first-child span {
     padding: 5px 10px 5px 10px;
 }
 
-#short-bio {
+#tribute-info {
     grid-area: short;   
     align-self: flex-end;
     padding: 0px 0px 0px 25px;
     line-height: 1.5;
 }
 
-#short-bio h2 {
+#tribute-info h2 {
     text-transform: uppercase;
     margin-bottom: 35px;
 }
 
-#short-bio h2 span {
+#tribute-info h2 span {
     background-color: var(--color-accent);
     padding: 5px 10px;
     color: var(--color-neutral-light);
 }
 
-#short-bio p {
+#tribute-info p {
     border-left: 5px solid var(--color-neutral-dark);
     padding-left: 10px;
 }
@@ -178,11 +190,11 @@ td:first-child span {
             "cv";
     }
 
-    #image-section {
+    #img-div {
         margin-bottom: 35px;
     }
 
-    #short-bio {
+    #tribute-info {
         padding-left: 0px;
     }
 }
